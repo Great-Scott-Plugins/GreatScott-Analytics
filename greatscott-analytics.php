@@ -39,4 +39,7 @@ use GreatScottPlugins\GreatScottAnalytics\Analytics\Base;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-Base::init();
+define('BASE_PATH', \plugin_dir_path(__FILE__));
+define('BASE_URL', \plugin_dir_url(__FILE__));
+
+Base::load();
