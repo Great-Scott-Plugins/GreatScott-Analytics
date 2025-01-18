@@ -10,7 +10,7 @@ class ComposerStaticInit741f099ced0d7b3f941e9d8c2df6054b
         'G' => 
         array (
             'GreatScottPlugins\\WordPressPlugin\\' => 34,
-            'GreatScottPlugins\\GreatscottAnalytics\\' => 38,
+            'GreatScottPlugins\\GreatScottAnalytics\\' => 38,
         ),
     );
 
@@ -19,9 +19,9 @@ class ComposerStaticInit741f099ced0d7b3f941e9d8c2df6054b
         array (
             0 => __DIR__ . '/..' . '/great-scott-plugins/wordpress-plugin/src',
         ),
-        'GreatScottPlugins\\GreatscottAnalytics\\' => 
+        'GreatScottPlugins\\GreatScottAnalytics\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/',
         ),
     );
 

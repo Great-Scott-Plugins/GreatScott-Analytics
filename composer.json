@@ -5,12 +5,12 @@
     "license": "GPL-3.0-or-later",
     "autoload": {
         "psr-4": {
-            "GreatScottPlugins\\GreatscottAnalytics\\": "src/"
+            "GreatScottPlugins\\GreatScottAnalytics\\": "."
         }
     },
     "require": {
         "php": ">=7.3.5",
-        "great-scott-plugins/wordpress-plugin": "1.0.5"
+        "great-scott-plugins/wordpress-plugin": "1.0.*"
     },
     "repositories": [
         {

@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'GreatScottPlugins\\WordPressPlugin\\' => array($vendorDir . '/great-scott-plugins/wordpress-plugin/src'),
-    'GreatScottPlugins\\GreatscottAnalytics\\' => array($baseDir . '/src'),
+    'GreatScottPlugins\\GreatScottAnalytics\\' => array($baseDir . '/'),
 );
