@@ -1,0 +1,21 @@
+{
+    "name": "great-scott-plugins/greatscott-analytics",
+    "description": "Analytics",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "GreatScottPlugins\\GreatscottAnalytics\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.3.5",
+        "great-scott-plugins/wordpress-plugin": "1.0.5"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Great-Scott-Plugins/WordPress-Plugin.git"
+        }
+    ]
+}

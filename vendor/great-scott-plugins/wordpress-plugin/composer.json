@@ -1,0 +1,27 @@
+{
+    "name": "great-scott-plugins/wordpress-plugin",
+    "description": "Library to use as basis for WordPress plugins.",
+    "type": "library",
+    "version": "1.0.4",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name" : "Great Scott Plugins",
+            "email": "scotts@greatscottplugins.com",
+            "homepage": "https://greatscottplugins.com/",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": ">=7.4"
+        },
+        "preferred-install": "dist"
+    },
+    "autoload": {
+        "psr-4": {
+            "GreatScottPlugins\\WordPressPlugin\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

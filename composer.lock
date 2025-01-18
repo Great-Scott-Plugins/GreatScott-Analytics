@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "738480889a11322b10abfe0e81e07a1a",
+    "packages": [
+        {
+            "name": "great-scott-plugins/wordpress-plugin",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Great-Scott-Plugins/WordPress-Plugin.git",
+                "reference": "f547a82fed8c94d2daecbf3b2656fd5f1505495f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Great-Scott-Plugins/WordPress-Plugin/zipball/f547a82fed8c94d2daecbf3b2656fd5f1505495f",
+                "reference": "f547a82fed8c94d2daecbf3b2656fd5f1505495f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GreatScottPlugins\\WordPressPlugin\\": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Great Scott Plugins",
+                    "email": "scotts@greatscottplugins.com",
+                    "homepage": "https://greatscottplugins.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Library to use as basis for WordPress plugins.",
+            "support": {
+                "source": "https://github.com/Great-Scott-Plugins/WordPress-Plugin/tree/1.0.4",
+                "issues": "https://github.com/Great-Scott-Plugins/WordPress-Plugin/issues"
+            },
+            "time": "2023-05-19T02:19:17+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.3.5"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}
