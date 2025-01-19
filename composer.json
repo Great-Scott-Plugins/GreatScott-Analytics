@@ -9,8 +9,8 @@
         }
     },
     "require": {
-        "php": ">=7.3.5",
-        "great-scott-plugins/wordpress-plugin": "1.0.*"
+        "php": ">=7.4",
+        "great-scott-plugins/wordpress-plugin": "1.0.6"
     },
     "repositories": [
         {

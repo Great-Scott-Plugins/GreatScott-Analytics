@@ -3,6 +3,7 @@ import { ClickstreamAnalytics, PageType, SendMode } from '@aws/clickstream-web';
 declare global {
 	interface Window {
 		GreatScottAnalytics: {
+			endpointCollect: string;
 			siteName: string;
 			siteNameEncoded: string;
 			siteUrl: string;
@@ -12,7 +13,7 @@ declare global {
 
 ClickstreamAnalytics.init( {
 	appId: window.GreatScottAnalytics.siteNameEncoded,
-	endpoint: window.GreatScottAnalytics.siteUrl,
+	endpoint: window.GreatScottAnalytics.endpointCollect,
 	isLogEvents: true, // TODO: Make this configurable.
 	isTrackAppEndEvents: true, // TODO: Make this configurable.
 	isTrackAppStartEvents: true, // TODO: Make this configurable.
