@@ -36,10 +36,12 @@
 namespace GreatScottPlugins\GreatScottAnalytics;
 
 use GreatScottPlugins\GreatScottAnalytics\Analytics\Base;
+use GreatScottPlugins\GreatScottAnalytics\Analytics\RestApi;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 define('BASE_PATH', \plugin_dir_path(__FILE__));
 define('BASE_URL', \plugin_dir_url(__FILE__));
 
-Base::load();
+Base::instance();
+RestApi::instance();

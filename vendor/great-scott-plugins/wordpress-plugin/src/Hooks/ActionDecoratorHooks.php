@@ -23,15 +23,14 @@
  * @copyright   Copyright (c) 2025 GreatScottPlugins. All rights reserved.
  **/
 
-namespace GreatScottPlugins\WordPressPlugin;
-
-use GreatScottPlugins\WordPressPlugin\Util\Strings as StringUtil;
+namespace GreatScottPlugins\WordPressPlugin\Hooks;
 
 /**
- * Trait Hookable
+ * ActionDecoratorHooks Trait
+ *
  * @package GreatScottPlugins
  */
-trait Hookable
+trait ActionDecoratorHooks
 {
     /**
      * Add doc hooks.
@@ -49,12 +48,12 @@ trait Hookable
             $arg_count = $method->getNumberOfParameters();
 
             // Handle hooks.
-            if (preg_match_all(
-                '#\* @(?P<type>filter|action|shortcode)\s+(?P<name>[a-z0-9\/\=\-\._]+)(?:,\s+(?P<priority>\d+))?#',
-                $phpdoc,
-                $matches,
-                PREG_SET_ORDER
-            )) {
+            if (false !== preg_match_all(
+                    '#\* @(?P<type>filter|action|shortcode)\s+(?P<name>[a-z0-9\/\=\-\._]+)(?:,\s+(?P<priority>\d+))?#',
+                    $phpdoc,
+                    $matches,
+                    PREG_SET_ORDER
+                )) {
                 foreach ($matches as $match) {
                     $type     = $match['type'];
                     $name     = $match['name'];
@@ -72,43 +71,13 @@ trait Hookable
                 }
             }
 
-            // Handle base plugin functionality.
-            if (preg_match_all(
-                '#\* @(?P<type>on_activate|on_deactivate)#',
-                $phpdoc,
-                $matches,
-                PREG_SET_ORDER
-            )) {
-                foreach ($matches as $match) {
-                    $type     = $match['type'];
-                    $callback = [$this, $method->getName()];
-
-                    switch ($type) {
-                        case 'on_activate':
-                            call_user_func(
-                                ['\\register_activation_hook'],
-                                $method->getFileName(),
-                                $callback
-                            );
-                            break;
-                        case 'on_deactivate':
-                            call_user_func(
-                                ['\\register_deactivation_hook'],
-                                $method->getFileName(),
-                                $callback
-                            );
-                            break;
-                    }
-                }
-            }
-
             // Handle CLI commands.
-            if (preg_match_all(
-                '#\* @(?P<type>command)\s+(?P<name>[a-z0-9\/\=\-\._\: ]+)?#',
-                $phpdoc,
-                $matches,
-                PREG_SET_ORDER
-            )) {
+            if (false !== preg_match_all(
+                    '#\* @(?P<type>command)\s+(?P<name>[a-z0-9\/\=\-\._\: ]+)?#',
+                    $phpdoc,
+                    $matches,
+                    PREG_SET_ORDER
+                )) {
                 foreach ($matches as $match) {
                     $type     = $match['type'];
                     $name     = $match['name'];
@@ -118,16 +87,17 @@ trait Hookable
             }
 
             // Ajax handler.
-            if (preg_match_all(
-                '#\* @(?P<type>ajax)\s+?(?P<name>[a-z0-9\/\=\-\._]+)?#',
-                $phpdoc,
-                $matches,
-                PREG_SET_ORDER
-            )) {
+            if (false !== preg_match_all(
+                    '#\* @(?P<type>ajax)\s+?(?P<name>[a-z0-9\/\=\-\._]+)?#',
+                    $phpdoc,
+                    $matches,
+                    PREG_SET_ORDER
+                )) {
                 foreach ($matches as $match) {
                     $name     = $match['name'] ?? StringUtil::toSnakeCase($method->getName());
                     $priority = empty($match['priority']) ? 11 : intval($match['priority']);
                     $callback = [$this, $method->getName()];
+
                     foreach (['wp_ajax', 'wp_ajax_nopriv'] as $ajax_hook) {
                         call_user_func(
                             [
