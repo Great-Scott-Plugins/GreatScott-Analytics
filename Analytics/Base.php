@@ -97,8 +97,15 @@ class Base extends Plugin {
         $localizes = [];
 
         switch ($handle) {
-            default;
-                // Silence is golden.
+            case 'great-scott-analytics/main':
+                $localizes[] = [
+                    'object_name' => 'GreatScottAnalytics',
+                    'value' => [
+                        'siteName' => \get_bloginfo('name'),
+                        'siteNameEncoded' => md5(\get_bloginfo('name')),
+                        'siteUrl' => \get_bloginfo('url'),
+                    ],
+                ];
                 break;
         }
 

@@ -19,5 +19,8 @@
   "devDependencies": {
     "@wordpress/env": "^10.16.0",
     "@wordpress/scripts": "^30.9.0"
+  },
+  "dependencies": {
+    "@aws/clickstream-web": "^0.12.2"
   }
 }

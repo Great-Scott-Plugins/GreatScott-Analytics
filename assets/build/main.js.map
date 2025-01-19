@@ -1,1 +1,0 @@
-{"version":3,"file":"main.js","mappings":";;;;AAAAA,MAAM,CAACC,gBAAgB,CAAC,kBAAkB,EAAE,YAAW,CAEvD,CAAC,CAAC,C","sources":["webpack://greatscott-analytics/./assets/src/main.ts"],"sourcesContent":["window.addEventListener('DOMContentLoaded', function() {\n\n});\n"],"names":["window","addEventListener"],"sourceRoot":""}
