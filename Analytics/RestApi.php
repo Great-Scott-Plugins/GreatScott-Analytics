@@ -40,6 +40,8 @@ class RestApi extends Singleton
                             return is_numeric($key);
                         }, ARRAY_FILTER_USE_KEY);
 
+                        // TODO: Ok, we receive the above events. Now put them somewhere.
+
                         return \rest_ensure_response(compact('app_id', 'events'));
                     },
                     'permission_callback' => '__return_true',
