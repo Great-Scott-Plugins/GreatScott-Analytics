@@ -31,7 +31,7 @@ GreatScott Analytics is a tool that helps you track and analyze user behavior on
 - [x] Set up project
 - [x] Set up local development
 - [x] Set up deployment pipeline to WordPress
-- [ ] Set up endpoint for receiving events from WordPress
+- [x] Set up endpoint for receiving events from WordPress
 - [ ] Set up storage for events
 - [ ] Set up event tracking for key events (click, scroll, etc.) with key base data (page, category, etc.)
 - [ ] Add aanalytics dashboard base
