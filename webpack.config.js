@@ -9,4 +9,12 @@ module.exports = {
         ],
         "main": path.resolve(process.cwd(), 'assets/src', 'main')
     },
+    resolve: {
+        ...defaultConfig.resolve,
+        alias: {
+            ...defaultConfig.resolve.alias,
+            '@/components': path.resolve(__dirname, 'components'),
+            '@':  path.resolve(__dirname, 'assets/src/')
+        }
+    }
 }

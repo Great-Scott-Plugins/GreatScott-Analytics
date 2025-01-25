@@ -1,11 +1,8 @@
-// @ts-ignore
-import { createRoot, render } from '@wordpress/element';
-// @ts-ignore
-import domReady from '@wordpress/dom-ready';
+import { createRoot } from 'react-dom/client';
 
 import App from './components/App';
 
-domReady(() => {
+document.addEventListener('DOMContentLoaded', () => {
     const target = document.getElementById( 'greatscottanalytics_app' );
 
     if (target) {
