@@ -26,12 +26,12 @@ class Base extends Plugin
         $asset_files = glob($asset_root . '*.asset.php');
 
         // Enqueue webpack loader.js, if it exists.
-        if (true === is_readable($asset_root . 'loader.js')) {
+        if (true === is_readable($asset_root . 'runtime.js')) {
             self::enqueueScript(
                 'great-scott-analytics/runtime',
-                $asset_uri . 'loader.js',
+                $asset_uri . 'runtime.js',
                 [],
-                filemtime($asset_root . 'loader.js')
+                filemtime($asset_root . 'runtime.js')
             );
         }
 
@@ -131,13 +131,13 @@ class Base extends Plugin
      *
      * @param string $handle
      * @param string $src
-     * @param string[] $dependencies
+     * @param bool $dependencies
      * @param string|bool|null $version
      * @param string $media
      *
      * @return void
      */
-    public static function enqueueStyle($handle, string $src = '', $dependencies = [], $version = false, $media = 'all')
+    public static function enqueueStyle(string $handle, string $src = '', bool $dependencies = false, $version = false, string $media = 'all')
     {
         \wp_enqueue_style($handle, $src, $dependencies, $version, $media);
     }

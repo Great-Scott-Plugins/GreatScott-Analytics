@@ -6,9 +6,9 @@
     "env:start": "wp-env start",
     "env:stop": "wp-env stop",
     "env:restart": "wp-env restart",
-    "assets:build": "wp-scripts build assets/src/main --output-path=assets/build/",
-    "assets:start": "wp-scripts start assets/src/main --output-path=assets/build/",
-    "assets:start:hot": "wp-scripts start assets/src/main --output-path=assets/build/ --hot",
+    "assets:build": "wp-scripts build --config webpack.config.js --output-path=assets/build/",
+    "assets:start": "wp-scripts start --config webpack.config.js --output-path=assets/build/",
+    "assets:start:hot": "wp-scripts start --config webpack.config.js --output-path=assets/build/ --hot",
     "assets:format": "wp-scripts lint-js assets/src/ --quiet",
     "assets:format:fix": "wp-scripts lint-js assets/src/ --fix --quiet"
   },
@@ -17,10 +17,14 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@aws/clickstream-web": "^0.12.2",
+    "@tailwindcss/postcss": "^4.0.0",
     "@wordpress/env": "^10.16.0",
-    "@wordpress/scripts": "^30.9.0"
+    "@wordpress/scripts": "^30.9.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.0"
   },
   "dependencies": {
-    "@aws/clickstream-web": "^0.12.2"
   }
 }
