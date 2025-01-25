@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react";
+import { Link, NavLink } from "react-router";
 
 import { cn } from "@/lib/utils"
 import {
@@ -18,32 +19,35 @@ export function NavMenu() {
         <NavigationMenu>
             <NavigationMenuList>
                 <NavigationMenuItem>
-                    <a href="#overview" legacyBehavior passHref>
-                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            Overview
-                        </NavigationMenuLink>
-                    </a>
+                    <NavLink className={navigationMenuTriggerStyle()} to="/">
+                        Overview
+                    </NavLink>
+                </NavigationMenuItem>
+                <NavigationMenuItem>
+                    <NavLink className={navigationMenuTriggerStyle()} to="/settings">
+                        Settings
+                    </NavLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuTrigger className="cursor-pointer">Traffic</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                            <ListItem href="#traffic/overview" title="Overview">
+                            <ListItem href="#traffic_overview" title="Overview">
                                 See how customers find your website.
                             </ListItem>
-                            <ListItem href="#traffic/landing_page_details" title="Landing Page Details">
+                            <ListItem href="#traffic_landing_page_details" title="Landing Page Details">
                                 See the first page visitors land on when visiting your website.
                             </ListItem>
-                            <ListItem href="#traffic/source_medium" title="Source/Medium">
+                            <ListItem href="#traffic_source_medium" title="Source/Medium">
                                 Details about referring traffic to your website.
                             </ListItem>
-                            <ListItem href="#traffic/technology" title="Technology">
+                            <ListItem href="#traffic_technology" title="Technology">
                                 Discover the devices/browsers your visitors are using.
                             </ListItem>
-                            <ListItem href="#traffic/campaigns" title="Campaigns">
+                            <ListItem href="#traffic_campaigns" title="Campaigns">
                                 Easily measure the effectiveness of your marketing campaigns.
                             </ListItem>
-                            <ListItem href="#traffic/social" title="Social">
+                            <ListItem href="#traffic_social" title="Social">
                                 Details about social traffic coming to your website.
                             </ListItem>
                         </ul>

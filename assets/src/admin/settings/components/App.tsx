@@ -1,3 +1,5 @@
+import { Outlet } from "react-router";
+
 import Header from "./Header";
 
 import {NavMenu} from "@/admin/settings/components/NavMenu.tsx";
@@ -12,6 +14,10 @@ export default function App() {
             </div>
             <div className="bg-white px-4 pt-2">
                 <NavMenu />
+            </div>
+
+            <div>
+                <Outlet />
             </div>
         </div>
     )
