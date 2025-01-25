@@ -35,6 +35,7 @@
 
 namespace GreatScottPlugins\GreatScottAnalytics;
 
+use GreatScottPlugins\GreatScottAnalytics\Analytics\Admin;
 use GreatScottPlugins\GreatScottAnalytics\Analytics\Base;
 use GreatScottPlugins\GreatScottAnalytics\Analytics\RestApi;
 
@@ -45,3 +46,7 @@ define('BASE_URL', \plugin_dir_url(__FILE__));
 
 Base::instance();
 RestApi::instance();
+
+if (true === \is_admin()) {
+    Admin\Settings::instance();
+}

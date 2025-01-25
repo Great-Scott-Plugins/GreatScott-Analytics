@@ -6,9 +6,9 @@
     "env:start": "wp-env start",
     "env:stop": "wp-env stop",
     "env:restart": "wp-env restart",
-    "assets:build": "wp-scripts build assets/src/main --output-path=assets/build/",
-    "assets:start": "wp-scripts start assets/src/main --output-path=assets/build/",
-    "assets:start:hot": "wp-scripts start assets/src/main --output-path=assets/build/ --hot",
+    "assets:build": "wp-scripts build --config webpack.config.js --output-path=assets/build/",
+    "assets:start": "wp-scripts start --config webpack.config.js --output-path=assets/build/",
+    "assets:start:hot": "wp-scripts start --config webpack.config.js --output-path=assets/build/ --hot",
     "assets:format": "wp-scripts lint-js assets/src/ --quiet",
     "assets:format:fix": "wp-scripts lint-js assets/src/ --fix --quiet"
   },

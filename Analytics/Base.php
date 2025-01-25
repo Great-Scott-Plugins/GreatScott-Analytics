@@ -26,12 +26,12 @@ class Base extends Plugin
         $asset_files = glob($asset_root . '*.asset.php');
 
         // Enqueue webpack loader.js, if it exists.
-        if (true === is_readable($asset_root . 'loader.js')) {
+        if (true === is_readable($asset_root . 'runtime.js')) {
             self::enqueueScript(
                 'great-scott-analytics/runtime',
-                $asset_uri . 'loader.js',
+                $asset_uri . 'runtime.js',
                 [],
-                filemtime($asset_root . 'loader.js')
+                filemtime($asset_root . 'runtime.js')
             );
         }
 
