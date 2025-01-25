@@ -1,4 +1,4 @@
 <?php
 
 ?>
-Wuddup
+<div id="greatscottanalytics_app"></div>

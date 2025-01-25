@@ -5,9 +5,8 @@ module.exports = {
     ...defaultConfig,
     entry: {
         "admin-settings": [
-            path.resolve(process.cwd(), 'assets/src/admin/settings', 'main.ts'),
-            path.resolve(process.cwd(), 'assets/src/admin/settings', 'main.scss')
+            path.resolve(process.cwd(), 'assets/src/admin/settings', 'main'),
         ],
-        "main": path.resolve(process.cwd(), 'assets/src', 'main.ts')
-    }
+        "main": path.resolve(process.cwd(), 'assets/src', 'main')
+    },
 }

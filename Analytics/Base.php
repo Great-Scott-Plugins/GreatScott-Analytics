@@ -131,13 +131,13 @@ class Base extends Plugin
      *
      * @param string $handle
      * @param string $src
-     * @param string[] $dependencies
+     * @param bool $dependencies
      * @param string|bool|null $version
      * @param string $media
      *
      * @return void
      */
-    public static function enqueueStyle($handle, string $src = '', $dependencies = [], $version = false, $media = 'all')
+    public static function enqueueStyle(string $handle, string $src = '', bool $dependencies = false, $version = false, string $media = 'all')
     {
         \wp_enqueue_style($handle, $src, $dependencies, $version, $media);
     }

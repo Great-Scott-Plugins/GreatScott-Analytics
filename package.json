@@ -17,10 +17,14 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@aws/clickstream-web": "^0.12.2",
+    "@tailwindcss/postcss": "^4.0.0",
     "@wordpress/env": "^10.16.0",
-    "@wordpress/scripts": "^30.9.0"
+    "@wordpress/scripts": "^30.9.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.0"
   },
   "dependencies": {
-    "@aws/clickstream-web": "^0.12.2"
   }
 }
