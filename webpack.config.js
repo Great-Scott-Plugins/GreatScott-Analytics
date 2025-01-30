@@ -6,7 +6,7 @@ module.exports = {
     entry: {
         "admin-settings": [
             path.resolve(process.cwd(), 'assets/src/admin/settings', 'main.tsx'),
-            path.resolve(process.cwd(), 'assets/src/admin/settings', 'main.scss'),
+            path.resolve(process.cwd(), 'assets/src/admin/settings', 'main.css'),
         ],
         "main": path.resolve(process.cwd(), 'assets/src', 'main')
     },
@@ -16,6 +16,6 @@ module.exports = {
             ...defaultConfig.resolve.alias,
             '@/components': path.resolve(__dirname, 'components'),
             '@': path.resolve(__dirname, 'assets/src/')
-        }
-    }
+        },
+    },
 };

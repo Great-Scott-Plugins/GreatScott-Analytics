@@ -12,6 +12,7 @@ export default function App() {
 			<div className="p-4 border border-b-2 border-indigo-100">
 				<h1>GreatScott Analytics</h1>
 			</div>
+
 			<div className="bg-white px-4 pt-2">
 				<NavMenu />
 			</div>
