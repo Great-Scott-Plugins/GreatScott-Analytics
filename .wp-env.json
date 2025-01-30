@@ -1,6 +1,4 @@
 {
     "core": "WordPress/WordPress#6.7.1",
-    "mappings": {
-        "wp-content/plugins/greatscott-analytics": "."
-    }
+    "phpmyadminPort": 8080
 }

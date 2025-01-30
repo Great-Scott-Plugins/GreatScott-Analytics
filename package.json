@@ -18,7 +18,7 @@
   "description": "",
   "devDependencies": {
     "@aws/clickstream-web": "^0.12.2",
-    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.1",
     "@wordpress/env": "^10.16.0",
     "@wordpress/scripts": "^30.9.0",
     "autoprefixer": "^10.4.20",
